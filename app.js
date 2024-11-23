@@ -19,15 +19,13 @@ function createTodoItem(task) {
   li.id = task.id;
 
   li.innerHTML = `
-        <h1>${task.text}</h1>
-        <div>
+        <span class="task-title">${task.text}</span>
           <button class="task-btn-done" onclick="toggleTask(${task.id})">${
     task.completed ? "Отменить" : "Сделано"
   }</button>
           <button class="task-btn-delete" onclick="deleteTask(${
             task.id
           })">Удалить</button>
-        </div>
         `;
 
   return li;
@@ -59,7 +57,6 @@ headerInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     addTask();
   }
-
 });
 
 function deleteTask(id) {
