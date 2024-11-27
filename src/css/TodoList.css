@@ -1,0 +1,8 @@
+.todos {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todos > .todo-task:last-child {
+  margin-bottom: 0;
+}
